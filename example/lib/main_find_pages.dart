@@ -69,15 +69,24 @@ class MainFindPageState extends State with SingleTickerProviderStateMixin {
 
   Widget buildRootLayout() {
     return Scaffold(
-      ///可滑动的布局
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        // title: topBarTitleFunction(),
+        // leading: topBarLeadingFunction(),
+        // leadingWidth: 94,
+        // elevation: 0.0,
+        // actions: [topBarActionLayout()],
+      ),
+
+      /// NestedScrollView 必须要有 body 不然会报错
       body: CustomRefreshPage(
-        child: buildBodyFunction(),
         isRefreshLog: true,
-        useShowLoadMore: true,
+        child: buildBodyFunction(),
         customRefreshController: customRefreshController,
       ),
     );
   }
+  /// 顶部 搜索bar Title
 
   ScrollController scrollController = new ScrollController();
   Widget buildBodyFunction() {
@@ -85,10 +94,11 @@ class MainFindPageState extends State with SingleTickerProviderStateMixin {
       controller: scrollController,
       headerSliverBuilder: (BuildContext context, bool flag) {
         return [
+
           SliverAppBar(
             ///用来设置 SliverAppBar 是否固定
             pinned: true,
-            expandedHeight: 240,
+            expandedHeight: 200,
 
             flexibleSpace: FlexibleSpaceBar(
               background: buildBannerFunction(),
@@ -123,7 +133,13 @@ class MainFindPageState extends State with SingleTickerProviderStateMixin {
                       ),
                     )
                     .toList()),
-          )
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              height: 500,
+              color: Colors.yellow,
+            ),
+          ),
         ];
       },
       body: TabBarView(

@@ -14,6 +14,7 @@ dependencies:
   #Dart常用工具类库。包含日期，正则，倒计时，定时任务，时间轴等工具类
   flustars: ^2.0.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

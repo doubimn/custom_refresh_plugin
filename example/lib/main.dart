@@ -50,12 +50,11 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.red,
         primaryColor: Colors.white,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('NestScrollerView'),
-        ),
-        body: MainFindPage(),
-      ),
+      home:MainFindPage()
+      // home: Scaffold(
+      //
+      //   body: MainFindPage(),
+      // ),
     );
   }
 }
