@@ -18,7 +18,7 @@ flutter NestedScrollView 下拉刷新插件
       #仓库地址
       url: https://github.com/doubimn/custom_refresh_plugin.git
       # 分支
-      ref: master
+      ref: main
  ```
  #### 2 为 NestedScrollView 添加下拉刷新
 
