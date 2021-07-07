@@ -1,4 +1,4 @@
-# custom_refresh_plugin
+# custom_refresh_plugin  (是修改了赵龙先生的https://github.com/zhaolongs/flutter_custom_refresh_plugin，中的flustars版本用于高版本使用)
 flutter NestedScrollView 下拉刷新插件
 
 
